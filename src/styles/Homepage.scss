@@ -1,0 +1,42 @@
+.p-text-header {
+  color: whitesmoke;
+  font-family: "Cinzel";
+  font-size: 4em;
+
+  span {
+    font-family: "Cinzel";
+  }
+}
+
+.p-text-sub {
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+.p-text-sub-two {
+  color: whitesmoke;
+}
+
+.attention {
+  color: #2ac2f0;
+  // font-style: italic;
+  text-shadow: 0px 2px 5px rgb(90, 90, 90);
+}
+
+.btn {
+  &.home-buttons {
+    color: white;
+    background-color: #2ac2f0;
+    border: #2ac2f0;
+
+    &:hover {
+      color: whitesmoke;
+      background-color: #2299bd;
+    }
+
+    &:active {
+      transform: translateY(4px);
+      transition: 0s;
+    }
+  }
+}

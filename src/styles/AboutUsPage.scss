@@ -1,0 +1,83 @@
+.titles {
+  color: #701321;
+  font-family: "Cinzel";
+  font-size: 3.5em;
+}
+
+.left-one {
+  width: 200%;
+  height: 500px;
+  background: url(../images/page1.jpg) no-repeat center / cover;
+  border-bottom: 10px solid #11294c !important;
+}
+
+.right-one {
+  min-height: 400px;
+  background-color: #97856a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: white;
+  margin-left: -115px;
+  border-bottom: 10px solid #701321 !important;
+  line-height: 1.35;
+  font-size: 1.25em;
+}
+
+.left-two {
+  min-height: 400px;
+  background-color: #97856a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: white;
+  margin-right: -115px;
+  border-bottom: 10px solid #701321 !important;
+  line-height: 1.35;
+  font-size: 1.25em;
+}
+
+.right-two {
+  width: 200%;
+  height: 500px;
+  background: url(../images/page10.jpg) no-repeat center / cover;
+  border-bottom: 10px solid #11294c !important;
+  z-index: -1;
+}
+
+.left-three {
+  width: 200%;
+  height: 500px;
+  background: url(../images/page20.jpg) no-repeat center / cover;
+  border-bottom: 10px solid #11294c !important;
+}
+
+.right-three {
+  min-height: 400px;
+  background-color: #97856a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: white;
+  margin-left: -115px;
+  border-bottom: 10px solid #701321 !important;
+  line-height: 1.35;
+  font-size: 1.25em;
+}
+
+#about-bottom {
+  background-color: #97856a;
+  border-bottom: 10px solid #11294c;
+}
+
+.about-bottom-text {
+  font-size: 1.5em;
+  color: whitesmoke;
+
+  a {
+    color: whitesmoke;
+  }
+}

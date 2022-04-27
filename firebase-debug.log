@@ -1,0 +1,168 @@
+[debug] [2021-07-14T20:59:24.913Z] ----------------------------------------------------------------------
+[debug] [2021-07-14T20:59:24.915Z] Command:       /Users/palmer-work/.nvm/versions/node/v14.6.0/bin/node /Users/palmer-work/.nvm/versions/node/v14.6.0/bin/firebase deploy --only functions
+[debug] [2021-07-14T20:59:24.915Z] CLI Version:   9.14.0
+[debug] [2021-07-14T20:59:24.915Z] Platform:      darwin
+[debug] [2021-07-14T20:59:24.915Z] Node Version:  v14.6.0
+[debug] [2021-07-14T20:59:24.916Z] Time:          Wed Jul 14 2021 16:59:24 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-07-14T20:59:24.916Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-14T20:59:24.922Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-14T20:59:24.922Z] > authorizing via signed-in user (sis_admin@senate.virginia.gov)
+[debug] [2021-07-14T20:59:24.922Z] [iam] checking project page-2020-28c30 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-07-14T20:59:24.924Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/page-2020-28c30:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-07-14T20:59:25.012Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=40","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:25.013Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/page-2020-28c30/serviceAccounts/page-2020-28c30@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-07-14T20:59:25.103Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'page-2020-28c30'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2021-07-14T20:59:25.717Z] Validating nodejs source
+[debug] [2021-07-14T20:59:27.368Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-07-14T20:59:27.368Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-07-14T20:59:27.370Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/page-2020-28c30/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-07-14T20:59:27.370Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/page-2020-28c30/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-07-14T20:59:27.371Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/page-2020-28c30/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-07-14T20:59:27.714Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:27.743Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-07-14T20:59:27.749Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-07-14T20:59:27.750Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/page-2020-28c30/adminSdkConfig  
+ 
+[debug] [2021-07-14T20:59:28.002Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:28.003Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/page-2020-28c30/configs  
+ 
+[debug] [2021-07-14T20:59:28.179Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:28.180Z] Analyzing nodejs backend spec
+[debug] [2021-07-14T20:59:28.278Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/page-2020-28c30/locations/-/functions  
+ 
+[debug] [2021-07-14T20:59:28.735Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:28.793Z] TypeError: Cannot read property 'length' of undefined
+    at Object.functionMatchesAnyGroup (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/functionsDeployHelper.js:11:23)
+    at /Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/deploymentPlanner.js:25:56
+    at Array.filter (<anonymous>)
+    at calculateRegionalFunctionChanges (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/deploymentPlanner.js:25:17)
+    at Object.createDeploymentPlan (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/deploymentPlanner.js:53:50)
+    at release (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/release.js:24:48)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-07-14T20:59:40.628Z] ----------------------------------------------------------------------
+[debug] [2021-07-14T20:59:40.630Z] Command:       /Users/palmer-work/.nvm/versions/node/v14.6.0/bin/node /Users/palmer-work/.nvm/versions/node/v14.6.0/bin/firebase deploy --only functions
+[debug] [2021-07-14T20:59:40.630Z] CLI Version:   9.14.0
+[debug] [2021-07-14T20:59:40.630Z] Platform:      darwin
+[debug] [2021-07-14T20:59:40.630Z] Node Version:  v14.6.0
+[debug] [2021-07-14T20:59:40.631Z] Time:          Wed Jul 14 2021 16:59:40 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-07-14T20:59:40.631Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-14T20:59:40.636Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-14T20:59:40.636Z] > authorizing via signed-in user (sis_admin@senate.virginia.gov)
+[debug] [2021-07-14T20:59:40.637Z] [iam] checking project page-2020-28c30 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-07-14T20:59:40.638Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/page-2020-28c30:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2021-07-14T20:59:40.725Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=38","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:40.726Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/page-2020-28c30/serviceAccounts/page-2020-28c30@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-07-14T20:59:40.817Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'page-2020-28c30'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2021-07-14T20:59:41.364Z] Validating nodejs source
+[debug] [2021-07-14T20:59:42.756Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-07-14T20:59:42.756Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-07-14T20:59:42.758Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/page-2020-28c30/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-07-14T20:59:42.758Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/page-2020-28c30/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-07-14T20:59:42.758Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/page-2020-28c30/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-07-14T20:59:43.125Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:43.146Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-07-14T20:59:43.179Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-07-14T20:59:43.180Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/page-2020-28c30/adminSdkConfig  
+ 
+[debug] [2021-07-14T20:59:43.433Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:43.434Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/page-2020-28c30/configs  
+ 
+[debug] [2021-07-14T20:59:43.564Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:43.564Z] Analyzing nodejs backend spec
+[debug] [2021-07-14T20:59:43.661Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/page-2020-28c30/locations/-/functions  
+ 
+[debug] [2021-07-14T20:59:44.114Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 20:59:44 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T20:59:44.170Z] TypeError: Cannot read property 'length' of undefined
+    at Object.functionMatchesAnyGroup (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/functionsDeployHelper.js:11:23)
+    at /Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/deploymentPlanner.js:25:56
+    at Array.filter (<anonymous>)
+    at calculateRegionalFunctionChanges (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/deploymentPlanner.js:25:17)
+    at Object.createDeploymentPlan (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/deploymentPlanner.js:53:50)
+    at release (/Users/palmer-work/.nvm/versions/node/v14.6.0/lib/node_modules/firebase-tools/lib/deploy/functions/release.js:24:48)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
