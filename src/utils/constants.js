@@ -13,7 +13,7 @@ export const extrasFormURL =
 export const endorsementsFormURL =
   "https://firebasestorage.googleapis.com/v0/b/page-2020-28c30.appspot.com/o/form-templates%2F2022%2F2022%20Page%20School%20Endorsement%20Form.pdf?alt=media&token=5203da7f-91b2-4e5f-9c5b-002d8e092850";
 
-export const sessionStart = "1/12/2022";
+export const sessionStart = "1/11/2023";
 
 export const prefixes = [
   "Prefix",
@@ -24,7 +24,7 @@ export const prefixes = [
   "Would rather not disclose",
 ];
 
-export const dueDate = "October 18, 2021 at 5:00 PM EST";
+export const dueDate = "October 17, 2022 at 5:00 PM EST";
 
 export const essayTopics = [
   `Think about what it means to be a Virginian. If you were in a
