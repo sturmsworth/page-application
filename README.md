@@ -1,10 +1,31 @@
+## Application Maintanence Instructions
+
+Due to things being changed on a yearly basis for this application there are some minor updates that need to take place with the application each year. Most of the necessary updates are assigned to variables inside the ./src/utils/constants.js file.
+
+Below you will find a brief description of each variable and what it controls
+
+# To update session start, short answer questions, the list of senators, forms, or essay questions:
+
+1. Inside the folder structure for the application navigate to the following and open the file:
+   - ./src/utils/constants.js
+2. Here is a list of the variables and what they manage:
+   - sessionStart = the date during which session starts. This will need to be updated yearly.
+   - extrasFormURL = the form URL for the extracurricular's form. If this is ever updated, you'll need to paste the new URL here.
+   - endorsementsFormURL = the form URL for the endorsements form. If this is ever updated, you'll need to paste the new URL here.
+   - dueDate = the date in which the application closes for the year. You must copy the same format: "October 17, 2022 at 5:00 PM EST"
+   - essayTopics = an array that takes two essay topics seperated by a comma. The topics must be in either backticks or quotation marks and in between brackets.
+   - shortAnswerTopics = an array that takes short answer topics. The topics must be in either backticks or quotation marks and in between brackets.
+   - districtArray = if a senator changes, you must edit this array to keep it current, this should only be relevant after election years.
+3. Edit the information as needed, then run yarn build once the necessary edits are completed.
+4. Transfer the contents of the "build" folder onto our servers inside /var/www/...
+
+## React-Boilerplate Readme
+
 ## Custom Details
 
 This project is created as a v2 of the page application.
 
 Things to update yearly are all inside the ./utils/constants file
-
-- change the due date, session start date, essay topics, and district array (if new senators are elected/if they've passed on)
 
 ## React Documentation
 
